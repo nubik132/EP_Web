@@ -1,0 +1,65 @@
+*{
+    margin: 0 auto;
+}
+p{
+    font-weight: bold;
+}
+p.lesson{
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 5px;
+}
+p.last{
+    padding-left: 15px;
+    color: #808080;
+}
+p.last::before{
+    content: "- ";
+}
+p.chapter{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+#h{
+    color:#5F0048;
+}
+table{
+    margin-top: 5px;
+    width: 100%;
+    border-spacing: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+table tr{
+    background: #DEF0DB;
+}
+table tr td{
+    vertical-align: bottom;
+}
+table tr td:first-child{
+    text-align: left;
+    border-right: 0px;
+    padding: 0;
+    margin-right: 0;
+}
+table tr td:last-child{
+    text-align: right;
+    border-left: 0px;
+    padding-left: 0;
+}
+table.upper tr td:last-child::after{
+    content: "Демо-версия";
+}
+table.lower tr td:last-child::after{
+    content: "✔";
+}
+table.lower tr td:first-child::before{
+    content: "- ";
+}
+table.lower{
+    color: #808080;
+    padding-left: 15px;
+
+}
+div.main{
+    width: 40vw;
+}

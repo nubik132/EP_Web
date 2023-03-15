@@ -1,0 +1,44 @@
+.first{
+    border: 1px solid black;
+    margin: auto;
+}
+div.main-div{
+    margin-left: auto;
+    margin-right: auto;
+}
+table.first{
+    border: 1px black solid;
+    border-collapse: separate;
+    margin: auto;
+    border-spacing: 1px;
+}
+table.first tr td{
+    margin: auto;
+    border: 1px black solid;
+}
+table.second{
+    margin: auto;
+    margin-top: 10px;
+    border-collapse: collapse;
+}
+table.second tr td{
+    margin: auto;
+    border: solid 1px;
+    padding: 1em 
+}
+table.third{
+    margin: auto;
+    border: solid 1px;
+}
+table.third tr td{
+    margin: auto;
+    border: solid 1px;
+}
+table.fours{
+    margin: auto;
+    border: solid 1px;
+}
+table.fours tr td{
+    margin: auto;
+    border: solid 1px;
+}

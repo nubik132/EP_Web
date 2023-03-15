@@ -1,0 +1,23 @@
+.first{
+    border: 1px solid black;
+}
+div.main-div{
+    margin-left: auto;
+    margin-right: auto;
+}
+table.first{
+    border: 1px black solid;
+    border-collapse: separate;
+    border-spacing: 1px;
+}
+table.first tr td{
+    border: 1px black solid;
+}
+table.second{
+    margin-top: 10px;
+    border-collapse: collapse;
+}
+table.second tr td{
+    border: solid 1px;
+    padding: 1em;
+}
