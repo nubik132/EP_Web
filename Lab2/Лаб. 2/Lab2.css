@@ -28,7 +28,7 @@ table.second tr td{
 }
 table.third{
     margin: auto;
-    border: solid 1px;
+    border: 0px;
 }
 table.third tr td{
     margin: auto;

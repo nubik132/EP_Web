@@ -48,8 +48,10 @@ table tr td:last-child{
 }
 table.upper tr td:last-child::after{
     content: "Демо-версия";
+    color: rgb(199, 68, 68);
 }
 table.lower tr td:last-child::after{
+    color: rgb(199, 68, 68);
     content: "✔";
 }
 table.lower tr td:first-child::before{
