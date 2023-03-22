@@ -20,25 +20,48 @@ div.cross{
 }
 div.cross p{
     margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 div.line{
-    border-radius: 20%;
+    position: relative;
+    border-radius: 5px;
     background-color: white;
     height: 10%;
     flex-direction: column;
 }
 
 .upper{
+    right: 25%;
+    bottom: 5px;
     width: 50%;
-    align-items: top;
 }
 
 .middle{
     width: 100%;
-    display: inline;
 }
 
 .lower{
+    top: 5px;
+    right: 15%;
     width: 70%;
 }
+
+div.cross:hover div.middle{
+    transform: rotateZ(45deg);
+}
+
+div.cross:hover div.upper, div.cross:hover div.lower{
+    transform: rotateZ(-45deg);
+}
+
+div.cross:hover div.upper{
+    right: 0%;
+    bottom: 0px;
+}
+
+div.cross:hover div.lower{
+    right: 0%;
+    top: 0px;
+}
+
