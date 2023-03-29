@@ -39,12 +39,14 @@
 
 .check {
     position: absolute;
-    width: 265px;
+    --width: 265px;
+    transform: scale(0%, 100%);
+    width: var(--width);
     height: 215px;
-    left: calc(50% - 265px/2);
-    top: calc(50% - 215px/2);
+    left: calc(50% + 34px - var(--width)/2);
+    top: calc(50% - 60px - 215px/2);
 
-    clip-path: inset(0px, 100px, 0px, 0px round 0%);
+    clip-path: inset(0px 0px 0px 0px);
     /* clip-path: inset(10px 5px 10px 50px round 5%); */
 }
 
@@ -52,8 +54,7 @@
     position: relative;
     width: 108px;
     height: 17px;
-    left: 18px;
-    top: 100px;
+    top: 154px;
 
     background: #D9D9D9;
     transform: rotate(45deg);
@@ -63,9 +64,19 @@
     position: relative;
     width: 223.52px;
     height: 17px;
-    left: 73px;
-    top: 50px;
-
+    left: 55px;
+    top: 104px;
     background: #D9D9D9;
     transform: rotate(-45deg);
+}
+
+input{
+}
+
+input:checked + label div.check{
+    transition: var(--width);
+    transition-duration: 0.5s;
+    transform-origin: top;
+    transform: scaleX(100%);
+    transform-origin: 100%;
 }
