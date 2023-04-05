@@ -5,7 +5,7 @@ const submit = document.querySelector('#submit');
 
 let code;
 
-const ALPHABET = "abcdefghijklmnopqrstuvwxyz";
+const ALPHABET = "abcdefghijklmnopqrstuvwxyz1234567890";
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
