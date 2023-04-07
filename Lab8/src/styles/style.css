@@ -1,0 +1,131 @@
+body {
+    margin: 0 auto;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+}
+
+.dragon {
+    position: relative;
+}
+
+.dragon-menu {
+    position: absolute;
+}
+
+.dragon .body {
+    width: 52px;
+    height: 83px;
+    left: -26px;
+    top: -27px;
+    z-index: 1;
+}
+
+.dragon .neck {
+    width: 80px;
+    height: 82px;
+    left: 0px;
+    top: -32px;
+}
+
+.dragon .upper-arm {
+    width: 56.64px;
+    height: 25.64px;
+    left: 11.81px;
+    top: 35px;
+}
+
+.dragon .lower-arm {
+    width: 56px;
+    height: 22px;
+    left: -0.92px;
+    top: 42.15px;
+    transform: rotate(12.62deg);
+}
+
+.dragon .upper-head {
+    width: 38px;
+    height: 65px;
+    left: 65px;
+    top: -8px;
+
+}
+
+.dragon .lower-head {
+    width: 23px;
+    height: 31px;
+    left: 67px;
+    top: 30px;
+}
+
+.block {
+    background-color: #555;
+    width: 1000px;
+    height: 1000px;
+}
+
+.dragon .body {}
+
+@keyframes dragon-hover-body-anim {
+    100% {
+        transform: rotate(4deg);
+    }
+}
+
+
+.dragon .lower-head {}
+
+@keyframes dragon-hover-lower-head-anim {
+    100% {
+        transform: rotate(-16deg) translateY(5px);
+    }
+}
+
+
+.dragon .upper-head {}
+
+@keyframes dragon-hover-upper-head-anim {
+    100% {
+        transform: rotate(-8deg) translateX(-4px) translateY(5px);
+    }
+}
+
+
+.dragon .neck {}
+
+@keyframes dragon-hover-neck-anim {
+    100% {
+        transform: rotate(8deg) translateY(5px);
+    }
+}
+
+.dragon .upper-arm {}
+
+@keyframes dragon-hover-upper-arm-anim {
+    0% {
+        transform: rotate(0deg) translateX(0) translateY(0px);
+    }
+
+    100% {
+        transform: rotate(12deg) translateX(-4px) translateY(5px);
+    }
+}
+
+.dragon .lower-arm {}
+
+
+
+@keyframes dragon-hover-lower-arm-anim {
+    0% {
+        transform: rotate(12.62deg);
+
+    }
+
+    100% {
+        transform: rotate(24deg) translateY(5px);
+    }
+}
