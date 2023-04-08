@@ -39,23 +39,26 @@
 
 .task-2 .rect-1 {
     background-color: #ff8888;
+    position: relative;
+    top: -317px;
+    left: 1px;
 
 }
 
 .task-2 .rect-2 {
     background-color: #7e89eb;
     position: relative;
-    top: 50px;
-    right: 25px;
-    z-index: -1;
+    top: -222px;
+    right: -31px;
+    z-index: 0;
 }
 
 .task-2 .rect-3 {
     background-color: #4dee99;
     position: relative;
-    top: 100px;
-    right: 50px;
-    z-index: -2;
+    top: -125px;
+    right: -64px;
+    z-index: 0;
 }
 
 .task-3 {
