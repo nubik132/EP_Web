@@ -70,7 +70,7 @@ body {
 
 .dragon .body {}
 
-@keyframes dragon-hover-body-anim {
+@keyframes dragon-wiggle-body-anim {
     100% {
         transform: rotate(4deg);
     }
@@ -79,7 +79,7 @@ body {
 
 .dragon .lower-head {}
 
-@keyframes dragon-hover-lower-head-anim {
+@keyframes dragon-wiggle-lower-head-anim {
     100% {
         transform: rotate(-16deg) translateY(5px);
     }
@@ -88,7 +88,7 @@ body {
 
 .dragon .upper-head {}
 
-@keyframes dragon-hover-upper-head-anim {
+@keyframes dragon-wiggle-upper-head-anim {
     100% {
         transform: rotate(-8deg) translateX(-4px) translateY(5px);
     }
@@ -97,7 +97,7 @@ body {
 
 .dragon .neck {}
 
-@keyframes dragon-hover-neck-anim {
+@keyframes dragon-wiggle-neck-anim {
     100% {
         transform: rotate(8deg) translateY(5px);
     }
@@ -105,7 +105,7 @@ body {
 
 .dragon .upper-arm {}
 
-@keyframes dragon-hover-upper-arm-anim {
+@keyframes dragon-wiggle-upper-arm-anim {
     0% {
         transform: rotate(0deg) translateX(0) translateY(0px);
     }
@@ -119,7 +119,7 @@ body {
 
 
 
-@keyframes dragon-hover-lower-arm-anim {
+@keyframes dragon-wiggle-lower-arm-anim {
     0% {
         transform: rotate(12.62deg);
 
@@ -127,5 +127,23 @@ body {
 
     100% {
         transform: rotate(24deg) translateY(5px);
+    }
+}
+
+@keyframes dragon-open-upper-head {
+    100%{
+        transform: rotate(-36deg) translateY(10px) translateX(-2px);
+    }
+}
+
+@keyframes dragon-open-lower-head {
+    100%{
+        transform: rotate(-20deg) translateX(10px) translateY(13px);
+    }
+}
+
+@keyframes dragon-cran-neck {
+    100%{
+        transform: rotate(24deg) translateY(8px) translateX(10px);
     }
 }

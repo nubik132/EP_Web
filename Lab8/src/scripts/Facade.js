@@ -1,54 +1,57 @@
 class Wiggle {
     doLowerHead() {
         document.getElementById("lower-head").style.animation =
-            "dragon-hover-lower-head-anim 2s infinite alternate";
+            "dragon-wiggle-lower-head-anim 2s infinite alternate";
     }
     doUpperHead() {
         document.getElementById("upper-head").style.animation =
-            "dragon-hover-upper-head-anim 2s infinite alternate";
+            "dragon-wiggle-upper-head-anim 2s infinite alternate";
     }
     doBody() {
         body.style.animation =
-            "dragon-hover-body-anim 2s infinite alternate";
+            "dragon-wiggle-body-anim 2s infinite alternate";
     }
     doNeck() {
         neck.style.animation =
-            "dragon-hover-neck-anim 2s infinite alternate";
+            "dragon-wiggle-neck-anim 2s infinite alternate";
     }
     doUpperArm() {
         document.getElementById("upper-arm").style.animation =
-            "dragon-hover-upper-arm-anim 2s infinite alternate .5s";
+            "dragon-wiggle-upper-arm-anim 2s infinite alternate .5s";
     }
     doLowerArm() {
         document.getElementById("lower-arm").style.animation =
-            "dragon-hover-lower-arm-anim 2s infinite alternate";
+            "dragon-wiggle-lower-arm-anim 2s infinite alternate";
     }
 }
 
 class Fire {
     doLowerHead() {
         document.getElementById("lower-head").style.animation =
-            "dragon-hover-lower-head-anim 2s infinite alternate .5s";
+            "dragon-open-lower-head .5s 2 alternate";
     }
     doUpperHead() {
         document.getElementById("upper-head").style.animation =
-            "dragon-hover-upper-head-anim 2s infinite alternate .5s";
+            "dragon-open-upper-head .5s 2 alternate";
     }
     doBody() {
         body.style.animation =
-            "dragon-hover-body-anim 2s infinite alternate .5s";
+            "dragon-wiggle-body-anim 2s infinite alternate";
     }
     doNeck() {
         neck.style.animation =
-            "dragon-hover-neck-anim 2s infinite alternate .5s";
+            "dragon-cran-neck .5s 2 alternate";
     }
     doUpperArm() {
-        document.getElementById("upper-arm").style.animation =
-            "dragon-hover-upper-arm-anim 2s infinite alternate .5s";
+        // document.getElementById("upper-arm").style.animation =
+        //     "dragon-wiggle-upper-arm-anim .3s 2 alternate";
+        document.getElementById("upper-arm").style.animationDuration = '.3s';
     }
     doLowerArm() {
-        document.getElementById("lower-arm").style.animation =
-            "dragon-hover-lower-arm-anim 2s infinite alternate .5s";
+        // document.getElementById("lower-arm").style.animation =
+        //     "dragon-wiggle-lower-arm-anim .3s 2 alternate";
+        document.getElementById("lower-arm").style.animationDuration = '.3s';
+
     }
     doFire() {
 
@@ -58,11 +61,11 @@ class Fire {
 class Sleep {
     doBody() {
         body.style.animation =
-            "dragon-hover-body-anim 2s infinite alternate .5s";
+            "dragon-wiggle-body-anim 2s infinite alternate .5s";
     }
     doNeck() {
         neck.style.animation =
-            "dragon-hover-neck-anim 2s infinite alternate .5s";
+            "dragon-wiggle-neck-anim 2s infinite alternate .5s";
     }
 }
 
@@ -83,16 +86,29 @@ class Facade {
         this.wiggle.doNeck();
     }
 
-    fire() {
-
+    doFire() {
+        this.fire.doBody();
+        this.fire.doLowerArm();
+        this.fire.doUpperArm();
+        this.fire.doUpperHead();
+        this.fire.doLowerHead();
+        this.fire.doNeck();
+        setTimeout(this.idle.bind(this), 1000);
     }
 
     sleep() {
 
     }
 }
+let facade = new Facade();
 
+function start() {
+    facade.idle();
+}
 
+function fire(){
+    facade.doFire();
+} 
 
-
+start();
 // new Facade().idle();
