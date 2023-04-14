@@ -147,3 +147,15 @@ body {
         transform: rotate(24deg) translateY(8px) translateX(10px);
     }
 }
+
+@keyframes dragon-lie-upper-head {
+    100%{
+        transform: rotate(-36deg) translateY(16px);
+    }
+}
+
+@keyframes dragon-lie-lower-head {
+    100%{
+        transform: rotate(-60deg) translateY(32px) translateX(8px);
+    }
+}

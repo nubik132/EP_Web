@@ -65,7 +65,16 @@ class Sleep {
     }
     doNeck() {
         neck.style.animation =
-            "dragon-wiggle-neck-anim 2s infinite alternate .5s";
+            "dragon-cran-neck 2s 2 alternate .5s";
+        // "dragon-wiggle-neck-anim 2s infinite alternate .5s";
+    }
+    doUpperHead() {
+        document.getElementById("upper-head").style.animation =
+            "dragon-lie-upper-head 2.5s";
+    }
+    doLowerHead() {
+        document.getElementById("lower-head").style.animation =
+            "dragon-lie-lower-head 2.5s";
     }
 }
 
@@ -77,7 +86,7 @@ class Facade {
         this.sleep = new Sleep();
     }
 
-    idle() {
+    doWiggle() {
         this.wiggle.doBody();
         this.wiggle.doLowerArm();
         this.wiggle.doUpperArm();
@@ -93,22 +102,28 @@ class Facade {
         this.fire.doUpperHead();
         this.fire.doLowerHead();
         this.fire.doNeck();
-        setTimeout(this.idle.bind(this), 1000);
+        setTimeout(this.doWiggle.bind(this), 1000);
     }
 
-    sleep() {
-
+    doSleep() {
+        this.sleep.doNeck();
+        this.sleep.doUpperHead();
+        this.sleep.doLowerHead();
     }
 }
 let facade = new Facade();
 
 function start() {
-    facade.idle();
+    facade.doWiggle();
 }
 
-function fire(){
+function fire() {
     facade.doFire();
-} 
+}
+
+function sleep() {
+    facade.doSleep();
+}
 
 start();
 // new Facade().idle();
