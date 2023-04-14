@@ -39,6 +39,15 @@ body {
     border-radius: 50%;
 }
 
+.rect-3:hover .rect-3-inner{
+    box-shadow: -10px -10px 22px #D1D9E6, 15px 15px 22px #fff;
+}
+
+.rect-3:hover {
+    box-shadow: inset -10px -10px 22px #D1D9E6, inset 20px 20px 23px #fff;
+    border-radius: 50%;
+}
+
 .rect-4 {
     border-radius: 50%;
     box-shadow: -15px -15px 22px #FFFFFF,
