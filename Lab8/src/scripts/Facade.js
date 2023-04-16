@@ -59,22 +59,52 @@ class Fire {
 }
 
 class Sleep {
-    doBody() {
-        body.style.animation =
-            "dragon-wiggle-body-anim 2s infinite alternate .5s";
-    }
-    doNeck() {
-        neck.style.animation =
-            "dragon-cran-neck 2s 2 alternate .5s";
-        // "dragon-wiggle-neck-anim 2s infinite alternate .5s";
-    }
+    // doBody() {
+    //     body.style.animation =
+    //         "dragon-wiggle-body-anim 2s infinite alternate .5s";
+    // }
+    // doNeck() {
+    //     // neck.style.animation =
+    //     //     "dragon-cran-neck 2s .5s forwards";
+    //     // "dragon-wiggle-neck-anim 2s infinite alternate .5s";
+    // }
     doUpperHead() {
         document.getElementById("upper-head").style.animation =
-            "dragon-lie-upper-head 2.5s";
+            "dragon-lie-upper-head 3s forwards";
+        setTimeout(doUpperHead2.bind(this), 3000);
+        function doUpperHead2() {
+            document.getElementById("upper-head").style.animation =
+                "dragon-lie-upper-head-2 2s infinite alternate";
+        }
     }
     doLowerHead() {
         document.getElementById("lower-head").style.animation =
-            "dragon-lie-lower-head 2.5s";
+            "dragon-lie-lower-head 3s ease-out forwards";
+        setTimeout(doLowerHead2.bind(this), 3000);
+        function doLowerHead2() {
+            document.getElementById("lower-head").style.animation =
+                "dragon-lie-lower-head-2 2s infinite alternate";
+        }
+    }
+    doUpperArm() {
+        document.getElementById("upper-arm").style.animation =
+            "dragon-lie-upper-arm 3s forwards";
+        setTimeout(doUpperArm2.bind(this), 3000);
+        function doUpperArm2() {
+            document.getElementById("upper-arm").style.animation =
+                "dragon-lie-upper-arm-2 2s infinite alternate .5s";
+        }
+        // document.getElementById("upper-arm").style.animation =
+        //     "dragon-lie-upper-arm 3s forwards";
+    }
+    doLowerArm() {
+        document.getElementById("lower-arm").style.animation =
+            "dragon-lie-lower-arm 3s forwards";
+        setTimeout(doLowerArm2.bind(this), 3000);
+        function doLowerArm2() {
+            document.getElementById("lower-arm").style.animation =
+                "dragon-lie-lower-arm-2 2s infinite alternate";
+        }
     }
 }
 
@@ -106,9 +136,12 @@ class Facade {
     }
 
     doSleep() {
-        this.sleep.doNeck();
+        this.wiggle.doBody();
+        this.wiggle.doNeck();
         this.sleep.doUpperHead();
         this.sleep.doLowerHead();
+        this.sleep.doUpperArm();
+        this.sleep.doLowerArm();
     }
 }
 let facade = new Facade();
@@ -126,4 +159,15 @@ function sleep() {
 }
 
 start();
+var isScrolled = false;
+document.querySelector(".dragon").addEventListener('mouseover', facade.doFire.bind(facade));
+window.addEventListener('scroll', function () {
+    if (window.scrollY > 0 && !isScrolled) {
+        facade.doSleep();
+        isScrolled = true;
+    } else if (window.scrollY == 0) {
+        facade.doWiggle();
+        isScrolled = false;
+    }
+});
 // new Facade().idle();
