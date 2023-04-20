@@ -11,6 +11,8 @@ body {
 
 .dragon {
     position: relative;
+    width: 120px;
+    height: 80px;
 }
 
 .dragon-menu {

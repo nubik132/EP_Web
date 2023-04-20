@@ -61,7 +61,7 @@ class Fire {
         fire.classList.add("fire");
         fire.id = "fire";
         dragon.appendChild(fire);
-        setTimeout(() => { dragon.removeChild(fire); }, 780);
+        setTimeout(() => { dragon.removeChild(fire); }, 720);
     }
 }
 
@@ -169,7 +169,7 @@ function sleep() {
 
 start();
 var isScrolled = false;
-document.querySelector("#dragon").addEventListener('mouseover', (event) => {if(event.target.id = "dragon") facade.doFire();});
+document.querySelector("#dragon").addEventListener('mouseenter', (event) => {if(event.target.id == "dragon") facade.doFire();});
 window.addEventListener('scroll', function () {
     if (window.scrollY > 0 && !isScrolled) {
         facade.doSleep();
