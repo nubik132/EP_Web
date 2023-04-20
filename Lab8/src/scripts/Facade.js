@@ -54,7 +54,14 @@ class Fire {
 
     }
     doFire() {
-
+        let dragon = document.getElementById("dragon");
+        let fire = document.createElement('img');
+        fire.src = "src/img/fire.gif";
+        fire.alt = "fire";
+        fire.classList.add("fire");
+        fire.id = "fire";
+        dragon.appendChild(fire);
+        setTimeout(() => { dragon.removeChild(fire); }, 780);
     }
 }
 
@@ -132,10 +139,12 @@ class Facade {
         this.fire.doUpperHead();
         this.fire.doLowerHead();
         this.fire.doNeck();
+        this.fire.doFire();
         setTimeout(this.doWiggle.bind(this), 1000);
     }
 
     doSleep() {
+        
         this.wiggle.doBody();
         this.wiggle.doNeck();
         this.sleep.doUpperHead();
@@ -160,7 +169,7 @@ function sleep() {
 
 start();
 var isScrolled = false;
-document.querySelector(".dragon").addEventListener('mouseover', facade.doFire.bind(facade));
+document.querySelector("#dragon").addEventListener('mouseover', (event) => {if(event.target.id = "dragon") facade.doFire();});
 window.addEventListener('scroll', function () {
     if (window.scrollY > 0 && !isScrolled) {
         facade.doSleep();

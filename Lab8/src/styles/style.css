@@ -162,6 +162,7 @@ body {
     0% {
         transform: rotate(38deg) translateX(-14px);
     }
+
     100% {
         transform: rotate(30deg) translateX(-12px) translateY(4px);
 
@@ -182,6 +183,7 @@ body {
     0% {
         transform: rotate(16deg) translateY(-5px) translateX(-18px);
     }
+
     100% {
         transform: rotate(18deg) translateY(-1px) translateX(-16px);
     }
@@ -217,4 +219,13 @@ body {
     100% {
         transform: rotate(-30deg) translateY(-8px) translateX(13px);
     }
+}
+
+.fire {
+    position: absolute;
+    width: 63.42px;
+    height: 35.52px;
+    left: 96.7px;
+    top: 46px;
+    transform: rotate(26deg);
 }
